@@ -10,9 +10,9 @@ function start()
 		var request = new XMLHttpRequest;
         request.open('GET', 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag', true);
         request.onload = function() {
-        	var response = JSON.parse(request.responseText);
+        	var response = JSON.parse(request);
         	console.log(response);
-        	var response = request["response"];
+        	var response = response["response"];
         	console.log(response);
         	response = response.substr(1);
         	console.log(response);
