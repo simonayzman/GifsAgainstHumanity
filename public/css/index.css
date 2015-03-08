@@ -1,12 +1,7 @@
+@font-face {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
 
-@font-face {
-    font-family: roboto_read;
-    src: url(../fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf);
-}
-@font-face {
-    font-family: roboto_head;
-    src: url(../fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf);
-}
 p, section, article, span, input[type="text"],
 select,
 input[type="submit"],
@@ -53,30 +48,7 @@ input[type="radio"], input[type="checkbox"] {
   right: 0px;
   overflow: auto;
 }
-.leaflet-sidebar {
-  z-index: 1020;
-}
-.leaflet-sidebar > .leaflet-control {
-  padding: 0px;
-}
-.leaflet-sidebar .close {
-  display: none;
-}
-.leaflet-control-layers label {
-  font-weight: normal;
-  margin-bottom: 0px;
-}
-.leaflet-control-layers-group-name {
-  font-weight: bold;
-  margin-bottom: .2em;
-  display: block;
-}
-.leaflet-control-layers-group {
-  margin-bottom: .5em;
-}
-.leaflet-control-layers-group label {
-  padding-left: .5em;
-}
+
 .table {
   margin-bottom: 0px;
 }
