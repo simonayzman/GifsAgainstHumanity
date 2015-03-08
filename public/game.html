@@ -12,17 +12,24 @@
         <div id='card-area'>
             <div id="top-cards" class="row">
                 <div class="col-md-2 col-md-8">
-                    <button type="button" class='cards btn btn-default'>1</button>
-                    <button type="button" class='cards btn btn-default'>2</button>
-                    <button type="button" class='cards btn btn-default'>3</button>
+                    <button type="button" class='cards btn btn-default' onclick='modal()'>1</button>
+                    <button type="button" class='cards btn btn-default' onclick='modal()'>2</button>
+                    <button type="button" class='cards btn btn-default' onclick='modal()'>3</button>
                 </div>
             </div>  
             <div id='bottom-cards' class="row">
                 <div class="col-md-2 col-md-8">
-                    <button type="button" class='cards btn btn-default'>4</button>
-                    <button type="button" class='cards btn btn-default'>5</button>
-                    <button type="button" class='cards btn btn-default'>6</button>
+                    <button type="button" class='cards btn btn-default' onclick='modal()'>4</button>
+                    <button type="button" class='cards btn btn-default' onclick='modal()'>5</button>
+                    <button type="button" class='cards btn btn-default' onclick='modal()'>6</button>
                 </div>  
+            </div>
+        </div>
+        <div id="gif-modal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <img id='modal_image' alt='gif image'/>
+                </div>
             </div>
         </div>
         <div id= 'prompt' class='row'>
@@ -42,9 +49,10 @@
         var imageUrl = 'img/randombutton.gif';
         $('#random').css('background-image', 'url(' + imageUrl + ')');
         console.log('Reached script.');
-
+        
+        $("#gif-modal").modal('show');
+        
         var cards = $(".cards");
-
         for (var i = 0; i < cards.length; i++) {
             console.log(cards[i]);
 
@@ -53,6 +61,11 @@
         var req = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC";
         var response = $.get(req);
         console.log(response);
+
+        function modal()
+        {
+            $(event.target).css;
+        }
     </script>
 </body>
 </html>
