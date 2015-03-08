@@ -4,28 +4,29 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <title>GifsAgainstHumanity</title>
 </head>
 <body>
     <div id='main' class='container-fluid'>
-        <div id='logo' class="col-md-offset-2 col-md-4">
-            <div class="row">
-                <img src='img/mainpage-logo.gif' width="400" alt='logo'/>
-            </div>  
-        </div>
-        <div id='gameplay' class="col-md-offset-1 col-md-4">
-            <div>
-                <button id='random' type="button" class="btn btn-primary btn-lg gradient">Random Game</button>
+        <br>
+        <br>
+        <br>
+        <div class='row'>
+            <div id='logo' class="col-md-offset-2 col-md-4">
+                <img src='img/mainpage-logo.gif' width="450" alt='logo'/>
             </div>
-            <div class="delimiter"></div>
-            <div>
-                <button id='create' type="button" class="btn btn-default">Create Game</button> 
-                <button id='join' type="button" class="btn btn-default">Join Game</button> 
+            <div id='gameplay' class="col-md-offset-1 col-md-4">
+                <div id="top" class='row'>
+                    <button id='random' type="button" class="btn btn-primary btn-lg gradient">Random Game</button>
+                </div>
+                <div id="bottom" class='row'>
+                    <button id='create' type="button" class="btn btn-default">Create Game</button> 
+                    <button id='join' type="button" class="btn btn-default">Join Game</button> 
+                </div>
             </div>
         </div>
     </div>
-
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
     <script type="text/javascript" src="js/jquery2.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -33,9 +34,24 @@
     <script type="text/javascript" src="js/app-config.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script>
-        var imageUrl = 'img/randombutton.gif';
-        $('#random').css('background-image', 'url(' + imageUrl + ')');
-        console.log('Reached script.')
+        var accept = '<button id="accept" type="button" class="btn btn-success"><i class="glyphicon glyphicon-ok"></i></button>';
+        var input = '<input id="input" type="text" class="form-control" placeholder="Game Name">';
+        $('#create').bind('click', function(){
+            if ($('#gameplay input'))
+            {
+                var replace_input_with_random = "<button id='random' type='button' class='btn btn-primary btn-lg gradient'>Random Game</button>";
+                $('#top').empty().append(input);
+
+                var replace_accept_with_join = "<button id='join' type='button' class='btn btn-default'>Join Game</button>";                
+                $('#replace_accept_with_join').empty().append(join_replace_accept);
+            }
+            else
+            {
+                var input = "<button id='random' type='button' class='btn btn-primary btn-lg gradient'>Random Game</button>";
+                $('#top').empty().append(input);
+               $("#random")
+            }
+        });
     </script>
 </body>
 </html>

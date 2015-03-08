@@ -12,3 +12,34 @@
 .cards {
 	
 }
+
+#gameplay {
+	margin: 60px 0;
+}
+
+#gameplay button {
+	margin: 10px;
+	margin-left: 70px;
+}
+
+.top button {
+	width: 65%;
+}
+
+.bottom button{ 
+	width: 50%;
+
+}
+
+#random {
+	width: 65%;
+	background-color: #EBBB1E;
+	box-shadow: 0px 5px 1px #7D6628;
+}
+
+.card {
+	max-width: 200px;
+	border-radius: 15px;
+	background-color: #FFFFFF;
+	margin: 25px;
+}

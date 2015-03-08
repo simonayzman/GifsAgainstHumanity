@@ -4,25 +4,40 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <title>GifsAgainstHumanity</title>
 </head>
 <body>
-    <div id='main' class='container-fluid'>
-        <div id='card-area'>
-            <div id="top-cards" class="row">
-                <div class="col-md-2 col-md-8">
-                    <button type="button" class='cards btn btn-default' onclick='modal()'>1</button>
-                    <button type="button" class='cards btn btn-default' onclick='modal()'>2</button>
-                    <button type="button" class='cards btn btn-default' onclick='modal()'>3</button>
-                </div>
-            </div>  
-            <div id='bottom-cards' class="row">
-                <div class="col-md-2 col-md-8">
-                    <button type="button" class='cards btn btn-default' onclick='modal()'>4</button>
-                    <button type="button" class='cards btn btn-default' onclick='modal()'>5</button>
-                    <button type="button" class='cards btn btn-default' onclick='modal()'>6</button>
+    <div id='main'>
+        <div class='container'>
+            <div id='card-area' class='row'>
+                <div id="top-cards" class="row">
+                    <div class="card col-md-2 col-md-offset-2">
+                        <img class='card_img' alt='image' onclick='modal()'/>
+                    </div>
+                    <div class="card col-md-2 col-md-offset-1">
+                        <img class='card_img' alt='image' onclick='modal()'/>
+                    </div>
+                    <div class="card col-md-2 col-md-offset-1">
+                        <img class='card_img' alt='image' onclick='modal()'/>
+                    </div>
                 </div>  
+                <div id='bottom-cards' class="row">
+                    <div class="card col-md-2 col-md-offset-2">
+                        <img class='card_img' alt='image' onclick='modal()'/>
+                    </div>
+                    <div class="card col-md-2 col-md-offset-1">
+                        <img class='card_img' alt='image' onclick='modal()'/>
+                    </div>
+                    <div class="card col-md-2 col-md-offset-1">
+                        <img class='card_img' alt='image' onclick='modal()'/>
+                    </div>
+                </div>
+            </div>
+            <div id= 'prompt' class='row'>
+                <div class="col-md-offset-1 col-md-8">
+                    When programmers tell me that they regularly use goto, I'm like...
+                </div>
             </div>
         </div>
         <div id="gif-modal" class="modal fade">
@@ -30,11 +45,6 @@
                 <div class="modal-content">
                     <img id='modal_image' alt='gif image'/>
                 </div>
-            </div>
-        </div>
-        <div id= 'prompt' class='row'>
-            <div class="col-md-offset-2 col-md-8">
-                Hello
             </div>
         </div>
     </div>
@@ -45,26 +55,13 @@
     <script type="text/javascript" src="js/jsviews.min.js"></script>
     <script type="text/javascript" src="js/app-config.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-    <script>
-        var imageUrl = 'img/randombutton.gif';
-        $('#random').css('background-image', 'url(' + imageUrl + ')');
-        console.log('Reached script.');
-        
-        $("#gif-modal").modal('show');
-        
-        var cards = $(".cards");
-        for (var i = 0; i < cards.length; i++) {
-            console.log(cards[i]);
-
-        };
-
-        var req = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC";
-        var response = $.get(req);
-        console.log(response);
-
+    <script type="text/javascript" src."js/init.js"></script>
+    <script type="text/javascript">
         function modal()
         {
-            $(event.target).css;
+            console.log("modal");
+            //$(event.target).modal;
+            $("#gif-modal").modal('show');
         }
     </script>
 </body>
