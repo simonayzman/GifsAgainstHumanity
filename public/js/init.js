@@ -1,7 +1,7 @@
 
 console.log("init.js");
 
-function start()
+function start(gifs)
 {
 	var request = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC";
 	var card_imgs = $(".card_img");

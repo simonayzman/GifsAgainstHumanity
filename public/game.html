@@ -58,7 +58,13 @@
     
     start();
 
-
+    function setGifs(gifs)
+    {
+        for (var i = 0; i < gifs.length; i++) 
+        {
+            $(gifs[i]).attr("src",image_url);  
+        }
+    }
 
     function modal()
     {
