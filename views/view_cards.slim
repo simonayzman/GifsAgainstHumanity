@@ -1,0 +1,14 @@
+h1 
+  '
+  =@@player_name
+  | 's cards
+
+div class="container"
+	div id='card-area' class='row'
+		- @@cards.each_index do |index|
+		  div class="card col-md-2 col-md-offset-2"
+		    a href="/choose_card?card=#{index}"
+		      img src="#{@@cards[index]['images']['fixed_width_small']['url']}" 
+	div id= 'prompt' class='row'
+	    div class="col-md-offset-1 col-md-8">
+	        When programmers tell me that they regularly use goto, I'm like...

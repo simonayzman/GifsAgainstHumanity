@@ -1,0 +1,59 @@
+div id='main' class='container-fluid'
+    br
+    br
+    br
+    div class='row'
+        div id='logo' class="col-md-offset-2 col-md-4"
+            img src='img/mainpage-logo.gif' width="450" alt='logo'
+        div id='gameplay' class="col-md-offset-1 col-md-4"
+            div id="top" class='row'
+                button id='random' type="button" class="btn btn-primary btn-lg gradient" Random Game
+            div id="bottom" class='row'
+                button id='create' type="button" class="btn btn-default" Create Game 
+                button id='join' type="button" class="btn btn-default" Join Game
+
+javascript:
+
+    $('#create').bind('click', function(){
+        if ($('#gameplay input').length > 0)
+        {
+            var replace_input_with_random = "<button id='random' type='button' class='btn btn-primary btn-lg gradient'>Random Game</button>";
+            $('#random').empty().replaceWith(replace_input_with_random);
+
+            var replace_accept_with_join = "<button id='join' type='button' class='btn btn-default'>Join Game</button>";                
+            $('#join').empty().replaceWith(replace_accept_with_join);
+        }
+        else
+        {
+            var input = '<input id="random" type="text" class="form-control" placeholder="Game Name"/>'; 
+            $('#random').empty().replaceWith(input);
+
+            var accept = '<button id="join" type="button" class="btn btn-success"><i class="glyphicon glyphicon-ok"></i></button>';
+            $('#join').empty().replaceWith(accept);
+        }
+    });
+
+    $('#join').bind('click', function(){
+        if ($('#gameplay input').length > 0)
+        {
+            var replace_input_with_random = "<button id='random' type='button' class='btn btn-primary btn-lg gradient'>Random Game</button>";
+            $('#random').empty().replaceWith(replace_input_with_random);
+
+            var replace_accept_with_create = "<button id='create' type='button' class='btn btn-default'>Create Game</button>";                
+            $('#create').empty().replaceWith(replace_accept_with_create);
+        }
+        else
+        {
+            var input = '<input id="random" type="text" class="form-control" placeholder="Game Name">';
+            $('#random').empty().replaceWith(input);
+
+            var accept = '<button id="create" type="button" class="btn btn-success"><i class="glyphicon glyphicon-ok"></i></button>';
+            $('#create').empty().replaceWith(accept);
+        }
+    });
+
+form action='/join' method='post'
+  Player name
+  input type="text" name="player_name"
+
+  input type='submit'
